@@ -16,6 +16,12 @@
   - 管理员（即动态作者）可以删除自己的动态。
 - **统计与资料**：后台提供 `/api/stats`、`/api/members` 等基础数据接口，便于扩展仪表盘。
 
+<img width="449" height="765" alt="image" src="https://github.com/user-attachments/assets/6d1afb49-0289-42f5-9cfe-3b4302f52caf" />
+<img width="443" height="771" alt="image" src="https://github.com/user-attachments/assets/81afeb38-b158-4ecf-a704-552ac6a86988" />
+<img width="549" height="764" alt="image" src="https://github.com/user-attachments/assets/81650eb1-c1a4-40f3-9f2a-43351117092e" />
+<img width="548" height="741" alt="image" src="https://github.com/user-attachments/assets/53cce5f9-8207-4995-a05c-3570c8748b10" />
+
+
 ## 技术栈
 
 | 层 | 技术 |
