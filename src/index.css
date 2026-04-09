@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #F8F9FA;
+  --color-background-alt: #FFFFFF;
+  --color-foreground: #1A1A1A;
+  --color-muted: #F1F2F3;
+  --color-muted-foreground: #666666;
+  --color-border: #E5E7EB;
+  --color-accent: #FF2442; /* XiaoHongShu Red */
+  --color-accent-secondary: #FFEDEF;
+  --color-accent-foreground: #FFFFFF;
+
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-heading: "Inter", sans-serif;
+  --font-display: "Inter", sans-serif;
+
+  --radius-default: 16px;
+  --radius-lg: 24px;
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+  body {
+    @apply bg-background text-foreground font-sans selection:bg-accent/20 selection:text-accent;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .glass-nav {
+    @apply bg-white/80 backdrop-blur-md border-t border-border;
+  }
+
+  .card-shadow {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.02);
+  }
+
+  .markdown-body {
+    @apply text-foreground/90 leading-relaxed;
+  }
+
+  .markdown-body h1 { @apply text-2xl font-bold mb-4 mt-6; }
+  .markdown-body h2 { @apply text-xl font-bold mb-3 mt-5; }
+  .markdown-body h3 { @apply text-lg font-bold mb-2 mt-4; }
+  .markdown-body p { @apply mb-4 text-sm; }
+  .markdown-body ul { @apply list-disc pl-5 mb-4 text-sm; }
+  .markdown-body ol { @apply list-decimal pl-5 mb-4 text-sm; }
+  .markdown-body blockquote { @apply border-l-4 border-accent/30 pl-4 italic my-4 text-muted-foreground; }
+  .markdown-body code { @apply bg-muted px-1.5 py-0.5 rounded font-mono text-xs; }
+  .markdown-body pre { @apply bg-muted p-4 rounded-lg overflow-x-auto my-4 border border-border text-xs; }
+  .markdown-body a { @apply text-accent hover:underline; }
+  .markdown-body strong { @apply text-foreground font-bold; }
+}
